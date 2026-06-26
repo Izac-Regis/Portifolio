@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izac Regis de Souza | Portfólio</title>
+    <meta name="description" content="Portfólio de Izac Regis de Souza, estudante de TI e desenvolvedor de software.">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Efeito de luz do cursor -->
+    <div class="cursor-glow"></div>
+
+    <div class="blob-bg blob-1"></div>
+    <div class="blob-bg blob-2"></div>
+
+    <nav class="navbar glass">
+        <a href="#home" class="logo">
+            <img src="assets/logo.png" alt="Izac Regis Logo" class="logo-img">
+        </a>
+        <ul class="nav-links">
+            <li><a href="#home" data-i18n="nav-home">Início</a></li>
+            <li><a href="#about" data-i18n="nav-about">Sobre</a></li>
+            <li><a href="#soft-skills" data-i18n="nav-skills">Skills</a></li>
+            <li><a href="#tech-skills" data-i18n="nav-tech">Tecnologias</a></li>
+            <li><a href="#projects" data-i18n="nav-projects">Projetos</a></li>
+            <li><a href="#contact" data-i18n="nav-contact">Contato</a></li>
+        </ul>
+        <div class="nav-right">
+            <div class="lang-switch">
+                <button id="btn-pt" class="lang-btn active">PT</button>
+                <button id="btn-en" class="lang-btn">EN</button>
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content hidden-fade-up">
+                <span class="greeting" data-i18n="hero-greeting">Olá, o meu nome é</span>
+                <h1 class="name">Izac Regis de Souza</h1>
+                <h2 class="role" data-i18n="hero-role">Desenvolvedor de Software</h2>
+                <p class="bio" data-i18n="hero-bio">
+                    Estudante de Análise e Desenvolvimento de Sistemas e Engenharia de Software. Proativo, apaixonado por tecnologia e em constante evolução no mundo do desenvolvimento.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary" data-i18n="hero-btn1">Ver Projetos</a>
+                    <a href="#contact" class="btn secondary" data-i18n="hero-btn2">Falar Comigo</a>
+                </div>
+            </div>
+            <div class="hero-image hidden-fade-in">
+                <!-- Imagem principal -->
+                <img src="assets/perfil.jpg" alt="Izac Regis de Souza" class="image-placeholder glass">
+            </div>
+        </section>
+
+        <section id="about" class="about section-padding">
+            <div class="section-title hidden-fade-up">
+                <h2 data-i18n="about-title">Sobre <span>Mim</span></h2>
+            </div>
+            <div class="about-content hidden-fade-up">
+                <div class="glass card">
+                    <p data-i18n="about-p1">
+                        Olá! Tenho 21 anos e sou um desenvolvedor apaixonado por tecnologia e por aprender coisas novas. Atualmente, curso <strong>Engenharia de Software</strong> na Jala University e <strong>Análise e Desenvolvimento de Sistemas</strong> (Uniasselvi) para expandir cada vez mais a minha base técnica.
+                    </p>
+                    <p data-i18n="about-p2">
+                        Durante minha jornada, desenvolvi diversos projetos práticos, passando pela criação de APIs, desenvolvimento de jogos, e configuração de máquinas virtuais e servidores. Possuo conhecimentos sólidos em bancos de dados relacionais e não-relacionais, tendo o <strong>Java</strong> como a minha linguagem de programação favorita e foco principal.
+                    </p>
+                    <p data-i18n="about-p3">
+                        Valorizo muito o trabalho em equipe — habilidade que venho aprimorando ativamente através de projetos colaborativos na faculdade. Além da tecnologia, sou um grande entusiasta no aprendizado de idiomas e dedico boa parte da minha rotina ao estudo intensivo do Inglês.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="soft-skills" class="section-padding">
+            <div class="section-title hidden-fade-up">
+                <h2 data-i18n="soft-title">Soft Skills <span>& Idiomas</span></h2>
+            </div>
+            <div class="soft-skills-grid hidden-fade-up">
+                <div class="soft-skill-card glass">
+                    <div class="skill-icon">🌍</div>
+                    <h3 data-i18n="soft-en-title">Inglês Técnico</h3>
+                    <span class="skill-badge" data-i18n="soft-en-badge">Intermediário</span>
+                    <p data-i18n="soft-en-desc">Confortável com a leitura de documentações complexas, artigos técnicos e consumo de conteúdos internacionais.</p>
+                </div>
+                <div class="soft-skill-card glass">
+                    <div class="skill-icon">🤝</div>
+                    <h3 data-i18n="soft-colab-title">Colaboração Ágil</h3>
+                    <p data-i18n="soft-colab-desc">Experiência prática em equipes, revisões de código (code review) e alinhamento com práticas de Scrum.</p>
+                </div>
+                <div class="soft-skill-card glass">
+                    <div class="skill-icon">💬</div>
+                    <h3 data-i18n="soft-com-title">Comunicação Assertiva</h3>
+                    <p data-i18n="soft-com-desc">Capacidade de transmitir ideias de forma clara e objetiva, interligando a lógica técnica com as necessidades do projeto.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tech-skills" class="section-padding">
+            <div class="section-title hidden-fade-up">
+                <h2 data-i18n="tech-title">Tecnologias <span>& Ferramentas</span></h2>
+            </div>
+            <div class="tech-grid glass hidden-fade-up">
+                <div class="tech-cell">
+                    <h4 data-i18n="tech-front">🌐 Front-end</h4>
+                    <div class="tech-icons">
+                        <img src="https://skillicons.dev/icons?i=html,css,js" alt="Front-end">
+                    </div>
+                </div>
+                <div class="tech-cell">
+                    <h4 data-i18n="tech-back">💻 Back-end</h4>
+                    <div class="tech-icons">
+                        <img src="https://skillicons.dev/icons?i=java,spring,cs,py" alt="Back-end">
+                    </div>
+                </div>
+                <div class="tech-cell">
+                    <h4 data-i18n="tech-db">🗄️ Banco de Dados</h4>
+                    <div class="tech-icons">
+                        <img src="https://skillicons.dev/icons?i=mysql,postgres,mongodb" alt="Banco de Dados">
+                    </div>
+                </div>
+                <div class="tech-cell">
+                    <h4 data-i18n="tech-tools">🔧 Ferramentas</h4>
+                    <div class="tech-icons">
+                        <img src="https://skillicons.dev/icons?i=git,github,docker" alt="Ferramentas">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects section-padding">
+            <div class="section-title hidden-fade-up">
+                <h2 data-i18n="proj-title">Meus <span>Projetos</span></h2>
+            </div>
+            <div class="projects-grid">
+                
+                <!-- Projeto 1: PacMan -->
+                <div class="project-card glass hidden-fade-up">
+                    <div class="project-img">
+                        <i class="fa-solid fa-ghost"></i>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>C#</span>
+                            <span>Uno Platform</span>
+                        </div>
+                        <h3>Pac-Man</h3>
+                        <p data-i18n="proj-pacman-desc">Recriação funcional do jogo clássico Pac-Man (2026). Implementação de lógica de movimentação, colisão, e estados de jogo.</p>
+                    </div>
+                </div>
+
+                <!-- Projeto 2: Loans Module -->
+                <div class="project-card glass hidden-fade-up" style="transition-delay: 100ms;">
+                    <div class="project-img">
+                        <i class="fa-solid fa-money-bill-wave"></i>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>Java</span>
+                            <span>JavaFX</span>
+                        </div>
+                        <h3>Loans Module</h3>
+                        <p data-i18n="proj-loans-desc">Sistema desktop para gestão de empréstimos bancários (2025) com conexão a banco de dados. Aplicação robusta de Orientação a Objetos e Design Patterns.</p>
+                    </div>
+                </div>
+
+                <!-- Projeto 3: Cis e user API -->
+                <div class="project-card glass hidden-fade-up" style="transition-delay: 200ms;">
+                    <div class="project-img">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>Java</span>
+                            <span>C#</span>
+                            <span>MongoDB</span>
+                            <span>MySQL</span>
+                        </div>
+                        <h3>Cis e user API</h3>
+                        <p data-i18n="proj-cis-desc">API desenvolvida em Java e C# com integração aos bancos MongoDB e MySQL. Funciona como um fórum interativo, com funcionalidades para criação de tópicos e respostas de usuários.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="contact section-padding">
+            <div class="section-title hidden-fade-up">
+                <h2 data-i18n="contact-title">Entre em <span>Contato</span></h2>
+            </div>
+            <div class="contact-container hidden-fade-up">
+                <!-- Caixa de Contato e Redes -->
+                <div class="contact-info glass">
+                    <h3 data-i18n="contact-box1-title">Vamos conversar!</h3>
+                    <p data-i18n="contact-box1-desc">Estou aberto a novas oportunidades e projetos colaborativos. Sinta-se à vontade para me conectar nas redes ou mandar um e-mail.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/Izac-Regis" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/izac-regis-502564335/?skipRedirect=true" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="mailto:izacregissouza@gmail.com" aria-label="E-mail"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Caixa do Currículo -->
+                <div class="contact-info glass">
+                    <h3 data-i18n="contact-box2-title">Meu Currículo</h3>
+                    <p data-i18n="contact-box2-desc">Quer saber mais sobre minha trajetória profissional e minhas qualificações? Baixe meu currículo completo em PDF.</p>
+                    <div class="cv-download">
+                        <a href="assets/curriculo.pdf" target="_blank" download="Izac_Regis_Curriculo.pdf" class="btn primary cv-btn" data-i18n="contact-btn-cv">
+                            <i class="fa-solid fa-file-pdf"></i> Baixar CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-footer">
+        <p data-i18n="footer-text">&copy; 2026 Izac Regis de Souza. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
