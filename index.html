@@ -26,6 +26,7 @@
             <li><a href="#soft-skills" data-i18n="nav-skills">Skills</a></li>
             <li><a href="#tech-skills" data-i18n="nav-tech">Tecnologias</a></li>
             <li><a href="#projects" data-i18n="nav-projects">Projetos</a></li>
+            <li><a href="#certificates" data-i18n="nav-certificates">Certificados</a></li>
             <li><a href="#contact" data-i18n="nav-contact">Contato</a></li>
         </ul>
         <div class="nav-right">
@@ -138,7 +139,9 @@
             <div class="section-title hidden-fade-up">
                 <h2 data-i18n="proj-title">Meus <span>Projetos</span></h2>
             </div>
-            <div class="projects-grid">
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev-btn" aria-label="Previous Project"><i class="fas fa-chevron-left"></i></button>
+                <div class="projects-carousel">
                 
                 <!-- Projeto 1: PacMan -->
                 <div class="project-card glass hidden-fade-up">
@@ -187,6 +190,51 @@
                     </div>
                 </div>
 
+                </div>
+                <button class="carousel-btn next-btn" aria-label="Next Project"><i class="fas fa-chevron-right"></i></button>
+                <div class="carousel-dots"></div>
+            </div>
+        </section>
+
+        <section id="certificates" class="certificates section-padding">
+            <div class="section-title hidden-fade-up">
+                <h2 data-i18n="cert-title">Meus <span>Certificados</span></h2>
+            </div>
+            
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev-btn" aria-label="Previous Certificate"><i class="fas fa-chevron-left"></i></button>
+                <div class="projects-carousel">
+                
+                <!-- Certificado 1 -->
+                <div class="project-card glass hidden-fade-up">
+                    <div class="project-info" style="justify-content: center; text-align: left;">
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.4rem;">2nd Online Conference of Applied Mathematics for Software Engineering</h3>
+                        <p style="color: var(--accent-secondary); font-size: 0.95rem; margin-bottom: 1.2rem; font-weight: 500;">Jala University | 2025</p>
+                        <p style="font-size: 0.95rem;" data-i18n="cert1-desc">Apresentação intitulada "Calculuz - Calculus Applied to Natural Lightining in Architecture". Reconhecimento por contribuições em aplicações matemáticas na engenharia de software.</p>
+                    </div>
+                </div>
+
+                <!-- Certificado 2 -->
+                <div class="project-card glass hidden-fade-up" style="transition-delay: 100ms;">
+                    <div class="project-info" style="justify-content: center; text-align: left;">
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.4rem;">Dean's List Certificate</h3>
+                        <p style="color: var(--accent-secondary); font-size: 0.95rem; margin-bottom: 1.2rem; font-weight: 500;">Jala University | 2025 & 2026</p>
+                        <p style="font-size: 0.95rem;" data-i18n="cert2-desc">Em reconhecimento ao excelente desempenho acadêmico obtido em dois semestres consecutivos (Term 1 e Term 2 - 2025).</p>
+                    </div>
+                </div>
+
+                <!-- Certificado 3 -->
+                <div class="project-card glass hidden-fade-up" style="transition-delay: 200ms;">
+                    <div class="project-info" style="justify-content: center; text-align: left;">
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.4rem;">3rd Online Conference of Applied Mathematics for Software Engineering</h3>
+                        <p style="color: var(--accent-secondary); font-size: 0.95rem; margin-bottom: 1.2rem; font-weight: 500;">Jala University | 2025</p>
+                        <p style="font-size: 0.95rem;" data-i18n="cert3-desc">Apresentação intitulada "SEAL". Reconhecimento por esforços na geração e contribuição para aplicações matemáticas na engenharia de software.</p>
+                    </div>
+                </div>
+
+                </div>
+                <button class="carousel-btn next-btn" aria-label="Next Certificate"><i class="fas fa-chevron-right"></i></button>
+                <div class="carousel-dots"></div>
             </div>
         </section>
 

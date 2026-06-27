@@ -109,6 +109,11 @@ document.addEventListener('DOMContentLoaded', () => {
             "proj-btn": "Ver no GitHub <i class=\"fa-brands fa-github\"></i>",
             "proj-loans-desc": "Sistema desktop para gestão de empréstimos bancários (2025) com conexão a banco de dados. Aplicação robusta de Orientação a Objetos e Design Patterns.",
             "proj-cis-desc": "API desenvolvida em Java e C# com integração aos bancos MongoDB e MySQL. Funciona como um fórum interativo, com funcionalidades para criação de tópicos e respostas de usuários.",
+            "cert-title": "Meus <span>Certificados</span>",
+            "nav-certificates": "Certificados",
+            "cert1-desc": "Apresentação intitulada \"Calculuz - Calculus Applied to Natural Lightining in Architecture\". Reconhecimento por contribuições em aplicações matemáticas na engenharia de software.",
+            "cert2-desc": "Em reconhecimento ao excelente desempenho acadêmico obtido em dois semestres consecutivos (Term 1 e Term 2 - 2025).",
+            "cert3-desc": "Apresentação intitulada \"SEAL\". Reconhecimento por esforços na geração e contribuição para aplicações matemáticas na engenharia de software.",
             "contact-title": "Entre em <span>Contato</span>",
             "contact-box1-title": "Vamos conversar!",
             "contact-box1-desc": "Estou aberto a novas oportunidades e projetos colaborativos. Sinta-se à vontade para me conectar nas redes ou mandar um e-mail.",
@@ -140,6 +145,11 @@ document.addEventListener('DOMContentLoaded', () => {
             "proj-btn": "View on GitHub <i class=\"fa-brands fa-github\"></i>",
             "proj-loans-desc": "Desktop system for bank loan management (2025) with database connection. Robust application of Object Orientation and Design Patterns.",
             "proj-cis-desc": "API developed in Java and C# with MongoDB and MySQL integration. Functions as an interactive forum, featuring functionalities for creating topics and user replies.",
+            "cert-title": "My <span>Certificates</span>",
+            "nav-certificates": "Certificates",
+            "cert1-desc": "Presentation titled \"Calculuz - Calculus Applied to Natural Lightining in Architecture\". Recognition for contributions to mathematical applications in software engineering.",
+            "cert2-desc": "In recognition of outstanding academic achievement over two consecutive semesters (Term 1 and Term 2 - 2025).",
+            "cert3-desc": "Presentation titled \"SEAL\". Recognition for efforts in generating and contributing to mathematical applications in software engineering.",
             "contact-title": "Get in <span>Touch</span>",
             "contact-box1-title": "Let's talk!",
             "contact-box1-desc": "I'm open to new opportunities and collaborative projects. Feel free to connect with me on social media or send an email.",
@@ -176,4 +186,87 @@ document.addEventListener('DOMContentLoaded', () => {
         btnPt.addEventListener('click', () => setLanguage('pt'));
         btnEn.addEventListener('click', () => setLanguage('en'));
     }
+
+    // Carousel Logic - Versão Profissional
+    function initCarousels() {
+        const carouselWrappers = document.querySelectorAll('.carousel-wrapper');
+        
+        carouselWrappers.forEach(wrapper => {
+            const carousel = wrapper.querySelector('.projects-carousel');
+            const prevBtn = wrapper.querySelector('.prev-btn');
+            const nextBtn = wrapper.querySelector('.next-btn');
+            const dotsContainer = wrapper.querySelector('.carousel-dots');
+            
+            if (!carousel || !dotsContainer) return;
+            
+            const cards = Array.from(carousel.querySelectorAll('.project-card'));
+            if (cards.length === 0) return;
+            
+            let dots = [];
+            
+            function updateCarousel() {
+                const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
+                const gap = parseFloat(getComputedStyle(carousel).gap) || 40;
+                const itemWidth = cards[0].offsetWidth + gap;
+                
+                const numDots = maxScrollLeft > 0 ? Math.round(maxScrollLeft / itemWidth) + 1 : 0;
+                
+                dotsContainer.innerHTML = '';
+                dots = [];
+                for (let i = 0; i < numDots; i++) {
+                    const dot = document.createElement('span');
+                    dot.classList.add('dot');
+                    dot.addEventListener('click', () => {
+                        carousel.scrollTo({
+                            left: i * itemWidth,
+                            behavior: 'smooth'
+                        });
+                    });
+                    dotsContainer.appendChild(dot);
+                    dots.push(dot);
+                }
+                updateActiveDot();
+            }
+            
+            function updateActiveDot() {
+                if (dots.length === 0) return;
+                const gap = parseFloat(getComputedStyle(carousel).gap) || 40;
+                const itemWidth = cards[0].offsetWidth + gap;
+                
+                let currentIndex = Math.round(carousel.scrollLeft / itemWidth);
+                if (currentIndex >= dots.length) currentIndex = dots.length - 1;
+                
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+            }
+
+            carousel.addEventListener('scroll', () => {
+                requestAnimationFrame(updateActiveDot);
+            });
+            
+            window.addEventListener('resize', () => {
+                requestAnimationFrame(updateCarousel);
+            });
+            
+            if (prevBtn && nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    const gap = parseFloat(getComputedStyle(carousel).gap) || 40;
+                    const itemWidth = cards[0].offsetWidth + gap;
+                    carousel.scrollBy({ left: itemWidth, behavior: 'smooth' });
+                });
+                
+                prevBtn.addEventListener('click', () => {
+                    const gap = parseFloat(getComputedStyle(carousel).gap) || 40;
+                    const itemWidth = cards[0].offsetWidth + gap;
+                    carousel.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+                });
+            }
+
+            updateCarousel();
+            setTimeout(updateCarousel, 300);
+        });
+    }
+    
+    initCarousels();
 });
